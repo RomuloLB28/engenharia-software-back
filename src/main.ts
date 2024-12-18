@@ -12,7 +12,7 @@ async function bootstrap() {
     credentials: true, // Permite cookies e credenciais
   });
 
-  await app.listen(4000);
+  await app.listen(process.env.PORT);
   console.log('Servidor rodando em http://localhost:4000');
 }
 bootstrap();
