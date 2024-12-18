@@ -13,7 +13,10 @@ import { UsuariosModule } from './usuarios/usuarios.module';
       database:process.env.DATABASE_DBNAME,
       autoLoadEntities: true,
       synchronize: false,
-    }),
+      logging: true,
+      ssl: {
+        ca: process.env.SSL_CERT, },
+       }),
     UsuariosModule, // Certifique-se de que está importado aqui
   ],
   controllers: [],
