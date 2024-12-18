@@ -9,6 +9,15 @@ export class UsuariosService {
     @InjectRepository(Usuario)
     private usuariosRepository: Repository<Usuario>,
   ) {}
+  
+  async validateUser(nome: string, senha: string): Promise<boolean> {
+  const usuario = await this.usuariosRepository.findOneBy({ nome });
+
+  if (usuario && usuario.senha_hash === senha) {
+    return true; // Credenciais corretas
+  }
+  return false; // Credenciais incorretas
+}
 
   findAll(): Promise<Usuario[]> {
     return this.usuariosRepository.find();
@@ -31,4 +40,5 @@ export class UsuariosService {
   async remove(id: number): Promise<void> {
     await this.usuariosRepository.delete(id);
   }
+  
 }

@@ -8,6 +8,9 @@ export class Usuario {
   @Column({ length: 100 })
   nome: string;
 
+  @Column({ length: 50})
+  matricula: string;
+
   @Column({ length: 100, unique: true })
   email: string;
 
