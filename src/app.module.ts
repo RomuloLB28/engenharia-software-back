@@ -6,11 +6,11 @@ import { UsuariosModule } from './usuarios/usuarios.module';
   imports: [
     TypeOrmModule.forRoot({
       type: 'mysql',
-      host: 'mysql-d293004-romulo-lobato.j.aivenclound.com',
-      port: Number(28237),
-      username: 'avnadmin',
-      password:'AVNS_1gzPo43od3YQvNHTZMi',
-      database:'defaultdb',
+      host:mysql-d293004-romulo-lobato.j.aivenclound.com,
+      port:Number(28237),
+      username:avnadmin,
+      password:AVNS_1gzPo43od3YQvNHTZMi,
+      database:defaultdb,
       autoLoadEntities: true,
       synchronize: false,
     }),
