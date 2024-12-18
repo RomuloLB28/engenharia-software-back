@@ -13,6 +13,5 @@ async function bootstrap() {
   });
 
   await app.listen(process.env.PORT);
-  console.log('Servidor rodando em http://localhost:4000');
 }
 bootstrap();
